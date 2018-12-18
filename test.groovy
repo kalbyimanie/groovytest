@@ -15,5 +15,12 @@ pipeline{
 				print "Test Stage2"
 			}
 		}
+		stage("Exec Shell"){
+			steps{
+				sh '''
+						run.sh
+					'''
+			}
+		}
 	}
 }
