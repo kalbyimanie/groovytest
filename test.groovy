@@ -17,10 +17,7 @@ pipeline{
 		}
 		stage("Exec Shell"){
 			steps{
-				sh '''
-						cd $WORKSPACE
-						run.sh
-					'''
+				sh '''cd $WORKSPACE;./run.sh'''
 			}
 		}
 	}
