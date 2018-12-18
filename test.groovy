@@ -19,9 +19,6 @@ pipeline{
 			steps{
 				sh '''cd $WORKSPACE;chmod +x run.sh;./run.sh'''
 			}
-			steps{
-				print "add steps within steps"
-			}
 		}
 	}
 }
