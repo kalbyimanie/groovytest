@@ -18,6 +18,7 @@ pipeline{
 		stage("Exec Shell"){
 			steps{
 				sh '''
+						cd /var/jenkins_home/workspace/Test
 						run.sh
 					'''
 			}
