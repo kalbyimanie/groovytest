@@ -21,8 +21,11 @@ pipeline{
 			}
 		}
 		stage("Test 3"){
-			def var="Maruf"
-			print "${var}"
+			steps{
+				def var="Maruf"
+				print "${var}"
+			}
+
 		}
 	}
 }
