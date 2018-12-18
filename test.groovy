@@ -20,5 +20,9 @@ pipeline{
 				sh '''cd $WORKSPACE;chmod +x run.sh;./run.sh'''
 			}
 		}
+		stage("Test 3"){
+			def var="Maruf"
+			print "${var}"
+		}
 	}
 }
