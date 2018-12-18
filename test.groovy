@@ -5,9 +5,11 @@ pipeline{
 			// priveleged true		
 		}
 	}
-	stage("Ping Host"){
-		steps{
-			sh ''' cd $WORKSPACE;chmod +x run.sh;./run.sh '''
+	stages{
+		stage("Ping Host"){
+			steps{
+				sh ''' cd $WORKSPACE;chmod +x run.sh;./run.sh '''
+			}
 		}
 	}
 }
