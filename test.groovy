@@ -10,5 +10,10 @@ pipeline{
 				print "Test Stage1"
 			}
 		}
+		stage("Stage2"){
+			steps{
+				print "Test Stage2"
+			}
+		}
 	}
 }
