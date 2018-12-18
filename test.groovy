@@ -2,7 +2,7 @@ pipeline{
 	agent{
 		node{
 			label "master"
-			priveleged true			
+			// priveleged true		
 		}
 	}
 	stage("Ping Host"){
