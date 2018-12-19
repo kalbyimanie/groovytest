@@ -6,12 +6,13 @@ pipeline{
 		stage("A") {
 			steps {
 				script {
-					if("${NUMBER}" == NULL){
-						print("NO NUMBER")
-					}
-					else{
-						print("NUMBER: ${NUMBER}")
-					}
+					print "${NUMBER}"
+					// if("${NUMBER}" == NULL){
+					// 	print("NO NUMBER")
+					// }
+					// else{
+					// 	print("NUMBER: ${NUMBER}")
+					// }
 				}
 			}
 		}
