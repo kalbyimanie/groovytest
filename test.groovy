@@ -6,7 +6,8 @@ pipeline{
 		stage("A") {
 			steps {
 				script {
-					print "${NUMBER}"
+					def int numb=${NUMBER}
+					print("${numb}")
 					// if("${NUMBER}" == NULL){
 					// 	print("NO NUMBER")
 					// }
