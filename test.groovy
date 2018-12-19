@@ -6,8 +6,10 @@ pipeline{
 		stage("A") {
 			steps {
 				script {
-					def int numb=${NUMBER}
-					print("${numb}")
+					int numb="${NUMBER}".toInteger()
+					for(int i=0;i<=$numb;i++){
+						println("GET:[" + i + "]")
+					}
 					// if("${NUMBER}" == NULL){
 					// 	print("NO NUMBER")
 					// }
