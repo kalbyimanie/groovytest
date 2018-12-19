@@ -1,17 +1,19 @@
 pipeline{
-	agent{
-		node{
-			label "master"	
-		}
+	agent {
+		node 'master'
 	}
-	stages{
-		stage("Ping Host"){
-			steps{
-				sh ''' cd $WORKSPACE;chmod +x run.sh;./run.sh '''
-			} 
+	stages {
+		stage("A") {
+			steps {
+				script {
+					if($NUMBER == NULL){
+						print("NO NUMBER")
+					}
+					else{
+						print("NUMBER: $NUMBER")
+					}
+				}
+			}
 		}
 	}
 }
-
-
-
