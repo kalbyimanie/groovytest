@@ -5,19 +5,23 @@ pipeline{
 	stages {
 		stage("A") {
 			steps {
-				script {
-					int numb="${NUMBER}".toInteger()
-					for(int i=0;i<=$numb;i++){
-						println("GET:[" + i + "]")
-					}
-					// if("${NUMBER}" == NULL){
-					// 	print("NO NUMBER")
-					// }
-					// else{
-					// 	print("NUMBER: ${NUMBER}")
-					// }
+				sh ''' chmod +x run.sh; ./run.sh '''
 				}
 			}
 		}
+		stage("Check"){
+			script{
+				try{
+					sh ''' ./run.sh '''
+				}catch(error){
+					throw error
+				}
+			}
+		}
+		stage("B"){
+			script{
+				println("Processing stage B")
+			}
+		}	
 	}
 }
