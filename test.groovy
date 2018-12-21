@@ -10,18 +10,9 @@ pipeline{
 			}
 		}
 		stage("Check") {
-			script{
-				try{
-					sh ''' ./run.sh '''
-				}catch(error){
-					throw error
-				}
+			steps{
+				sh ''' echo "Passing Check" '''
 			}
 		}
-		stage("B"){
-			script{
-				println("Processing stage B")
-			}
-		}	
 	}
 }
