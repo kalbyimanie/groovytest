@@ -9,7 +9,7 @@ pipeline{
 				}
 			}
 		}
-		stage("Check"){
+		stage("Check") {
 			script{
 				try{
 					sh ''' ./run.sh '''
